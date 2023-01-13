@@ -1,0 +1,160 @@
+
+/*
+
+=========== Public styles=========
+
+*/
+
+
+* , *:after , *:before {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Tahoma , Arial;
+
+}
+
+.container{
+    width: 85%;
+    margin: auto;
+}
+
+/*
+
+=========== Navbar styles=========
+
+*/
+
+.navbar{
+    padding: 20px;
+    overflow: hidden;
+    /* background: #ddd; */
+    position: relative;
+    border-bottom:1px solid ;
+}
+
+.navbar .logo .logo-text{
+    font-size: 30px;
+    font-weight: bold;
+}
+.navbar .logo {
+    width: 50%;
+    float: left;
+}
+
+
+.navbar input , .navbar label{
+    position: absolute;
+    top: 12px;
+    right: 25px;
+
+}
+.navbar input {
+    display: none;
+}
+
+
+.navbar label{
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: url(../img/Navbar/open.png) no-repeat;
+    background-size: cover;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.navbar input:checked ~ .ul-list{
+    display: block;
+}
+
+.navbar input:checked ~ label {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: url(../img/Navbar/close.png) no-repeat;
+    background-size: cover;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.navbar .ul-list{
+    width: 50%;
+    float: left;
+   list-style: none;
+
+}
+
+.navbar .ul-list .list-item {
+    display: inline-block;
+    text-decoration: none;
+
+}
+
+.navbar .ul-list .list-item a {
+    display: block;
+    color: #222;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+.navbar .ul-list .list-item a:hover{
+    color: #eb5424;
+}
+
+
+/*        Medaia navbar     */
+
+@media (min-width : 992px){
+    .navbar label{
+        display: none;
+    }
+
+}
+
+
+
+
+@media (max-width : 991px ){
+
+    .navbar .logo {
+        width: 100%;
+        float: none;
+    }
+
+    .navbar .ul-list{
+        width: 100%;
+        float: none;
+        margin-top: 10px;
+        display: none   ;
+    }
+
+    .navbar .ul-list .list-item {
+        display: block;
+        text-align: center;
+    }
+
+
+}
+
+
+
+/*=========== Home styles=========*/
+
+.home{
+    height: 500px;
+    background: url(../img/Home/home-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    position: relative;
+}
+
+.home-information{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
